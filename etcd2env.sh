@@ -16,4 +16,4 @@ while read -r env_name etcd_key ; do
 done < <(env | grep -E "${ETCD_ENVIRONMENT_VARIABLE_REGEX}"  | sed -E "s/${ETCD_ENVIRONMENT_VARIABLE_REGEX}/\1\t\2/")
 
 # Send the results to the output pipe
-echo -e "${environment}" > "${OUTPUT_PIPE}"
+echo -e "${environment}" | grep . > "${OUTPUT_PIPE}"
