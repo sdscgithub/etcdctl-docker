@@ -12,7 +12,7 @@ while read -r env_name etcd_key ; do
     echo >&2 "Unable to get value for '${etcd_key}' from etcd."
     exit 1
   fi
-  environment=$(printf '%s%s=%s\n' "${environment}" "${env_name}" "${env_value}")
+  environment="${environment}${env_name}=${env_value}\n"
 done < <(env | grep -E "${ETCD_ENVIRONMENT_VARIABLE_REGEX}"  | sed -E "s/${ETCD_ENVIRONMENT_VARIABLE_REGEX}/\1\t\2/")
 
 # Send the results to the output pipe
