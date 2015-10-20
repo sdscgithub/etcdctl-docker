@@ -16,7 +16,7 @@ ENV \
 # Install packages.
 RUN \
   apk --update add bash nano wget && \
-  rm /var/cache/apk/*
+  rm -rf /var/cache/apk/*
 
 # Install etcdctl from repository.
 RUN \
@@ -28,8 +28,8 @@ RUN \
   chmod +x /usr/local/bin/etcdctl
 
 # Add files to the container.
-COPY entrypoint.sh /entrypoint
+COPY entrypoint.sh /docker-entrypoint
 COPY etcd2env.sh /usr/local/bin/etcd2env
 
 # Set the entrypoint script.
-ENTRYPOINT ["/entrypoint"]
+ENTRYPOINT ["/docker-entrypoint"]
