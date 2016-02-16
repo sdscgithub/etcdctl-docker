@@ -11,7 +11,7 @@ MAINTAINER Marc Lennox <marc.lennox@gmail.com>
 # Set environment variables.
 ENV \
   TERM=xterm-color \
-  ETCD_VERSION=2.1.1
+  ETCD_VERSION=2.2.5
 
 # Install packages.
 RUN \
