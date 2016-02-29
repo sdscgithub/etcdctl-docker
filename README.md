@@ -1,2 +1,3 @@
-# etcdctl-docker
-Simple etcdctl client
+# Etcdctl Docker Image
+
+A minimal docker image for etcdctl client
