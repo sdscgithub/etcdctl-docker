@@ -10,7 +10,7 @@ MAINTAINER Marc Lennox <marc.lennox@gmail.com>
 
 # Set environment variables.
 ENV \
-  ETCD_VERSION=2.2.5
+  ETCD_VERSION=3.0.6
 
 # Install etcdctl from repository.
 RUN \
