@@ -6,11 +6,11 @@
 
 FROM tenstartups/alpine:latest
 
-MAINTAINER Marc Lennox <marc.lennox@gmail.com>
+LABEL maintainer="Marc Lennox <marc.lennox@gmail.com>"
 
 # Set environment variables.
 ENV \
-  ETCD_VERSION=3.0.6
+  ETCD_VERSION=3.1.11
 
 # Install etcdctl from repository.
 RUN \
